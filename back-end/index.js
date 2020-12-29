@@ -10,10 +10,10 @@ app.use(express.static('public'));
 app.post('/api', function(req, res) {
   var execFile = require('child_process').execFile;
   //For Linux
-  var program = "../NumeralTranslator";
+  //var program = "../NumeralTranslator";
 
   //For windows
-  //var program = "../NumeralTranslator.exe";
+  var program = "../NumeralTranslator.exe";
 
   var input = req.body.number;
   var child = execFile(program, [input],
